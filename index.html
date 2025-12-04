@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sam Hall - Game Designer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* PAGE-SPECIFIC STYLES ONLY */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #111;
+            color: #f0f0f0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #1e1e1e;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #00ffff;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+
+        nav {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #f0f0f0;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00ffff;
+        }
+
+        section {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            color: #00ffff;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #00ffff;
+            display: inline-block;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            display: block;
+            background-color: #1e1e1e;
+            padding: 1rem;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #f0f0f0;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding: 2rem;
+            text-align: center;
+            background-color: #1e1e1e;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+<header>
+    <h1>Sam Hall</h1>
+    <p>Game Designer | Unity Developer</p>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I studied game design at Falmouth University from 2016–2019, where I built a portfolio of small games. 
+        I later completed a master's degree while developing my first commercial title, 
+        <em>International Space Banana</em>. After its release, I joined Coatsink as a junior designer and quickly moved
+        into a mid-level role, taking on lead responsibilities for a smaller project.<br><br>
+
+        I have extensive experience designing for VR, as well as PC and mobile platforms. I consider myself a technical
+        designer — skilled in coding, visual scripting, and technical production workflows. I’m an expert Unity developer
+        and familiar with Unreal Engine.
+    </p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="projects">
+
+        <!-- PROJECT 1 -->
+<a href="men_in_black.html" class="project-card">
+    <div class="thumbnail-wrapper">
+        <img src="images/MIBMostWanted_KeyArt_16x9_4k.png" alt="Men in Black: Most Wanted Key Art">
+    </div>
+    <h3>Men in Black: Most Wanted</h3>
+    <p>Men in Black VR game for Meta Quest platforms.</p>
+</a>
+
+
+        <!-- PROJECT 2 -->
+        <a href="shootball.html" class="project-card">
+            <div class="thumbnail-wrapper">
+                <img src="Shootball_Trailer_Thumbnail.jpg" alt="Shootball">
+            </div>
+            <h3>Shootball</h3>
+            <p>Competitive VR multiplayer title later rebuilt for Meta Horizon Worlds.</p>
+        </a>
+
+        <!-- PROJECT 3 -->
+        <a href="international-space-banana.html" class="project-card">
+            <div class="thumbnail-wrapper">
+                <img src="ISB_Trailer_Thumbnail.jpg" alt="International Space Banana">
+            </div>
+            <h3>International Space Banana</h3>
+            <p>A comedic, philosophical low-gravity puzzle adventure.</p>
+        </a>
+
+        <!-- PROJECT 4 -->
+        <a href="gumption.html" class="project-card">
+            <div class="thumbnail-wrapper">
+                <img src="placeholder.jpg" alt="Gumption">
+            </div>
+            <h3>Gumption</h3>
+            <p>Telekinetic rhythmic VR combat experience.</p>
+        </a>
+
+        <!-- PROJECT 5 -->
+        <a href="the-promise.html" class="project-card">
+            <div class="thumbnail-wrapper">
+                <img src="placeholder.jpg" alt="The Promise">
+            </div>
+            <h3>The Promise</h3>
+            <p>Unreleased VR co-op hover-ship adventure.</p>
+        </a>
+
+        <!-- PROJECT 6 -->
+        <a href="timesplitters-rewind.html" class="project-card">
+            <div class="thumbnail-wrapper">
+                <img src="images/ts_keyart.png" alt="Timesplitters Rewind">
+            </div>
+            <h3>Timesplitters Rewind</h3>
+            <p>Fan remake using Unreal Engine 4 — challenge mode rebuilding.</p>
+        </a>
+
+        <!-- PROJECT 7 -->
+        <a href="chkn-nuggets.html" class="project-card">
+            <div class="thumbnail-wrapper">
+                <img src="placeholder.jpg" alt="CHKN NUGGETS">
+            </div>
+            <h3>CHKN NUGGETS</h3>
+            <p>Chaotic local party game full of minigames and creature-building.</p>
+        </a>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>If you'd like to collaborate, feel free to reach out:</p>
+    <ul>
+        <li>Email: <a href="mailto:samhall19@hotmail.co.uk">samhall19@hotmail.co.uk</a></li>
+        <li>LinkedIn: <a href="#">linkedin.com/in/samhall</a></li>
+        <li>Twitter: <a href="#">@samhallgames</a></li>
+    </ul>
+</section>
+
+<footer>&copy; 2025 Sam Hall. All rights reserved.</footer>
+
+</body>
+</html>

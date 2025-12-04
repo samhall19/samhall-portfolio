@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Men in Black: Most Wanted – Sam Hall</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0b0b0c;
+        color: #fff;
+    }
+
+    /* Sticky header */
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        background: #111;
+        border-bottom: 1px solid #333;
+    }
+
+    header a {
+        text-decoration: none;
+        color: #00adee;
+        font-size: 18px;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 20px;
+        color: #fff;
+        opacity: 0.8;
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: auto;
+        padding: 40px 20px 80px;
+        line-height: 1.6;
+    }
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        margin-top: 40px;
+        font-size: 28px;
+        color: #00adee;
+        border-bottom: 1px solid #333;
+        padding-bottom: 8px;
+    }
+
+    .quick-info {
+        background: #141415;
+        padding: 20px;
+        border-radius: 12px;
+        border: 1px solid #232323;
+        margin-bottom: 40px;
+    }
+
+    .quick-info p {
+        margin: 6px 0;
+        font-size: 18px;
+    }
+
+    /* Media Grid */
+    .media-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        margin-top: 40px;
+    }
+
+    .media-grid img,
+    .media-grid iframe {
+        width: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        border-radius: 12px;
+        border: 1px solid #333;
+        background: #222;
+        cursor: pointer;
+    }
+
+    /* Overlay */
+    #overlay {
+        position: fixed;
+        top:0;
+        left:0;
+        width: 100vw;
+        height:100vh;
+        background: rgba(0,0,0,0.9);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+        flex-direction: row;
+    }
+
+    #overlay img, #overlay iframe {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 12px;
+    }
+
+    #prev, #next {
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        font-size: 50px;
+        color:#00adee;
+        cursor:pointer;
+        user-select: none;
+        padding: 10px;
+    }
+
+    #prev { left: 20px; }
+    #next { right: 20px; }
+
+    #prev:hover, #next:hover { color:#fff; }
+
+    /* Sections */
+    .section-box {
+        background-color: #141415;
+        border: 1px solid #232323;
+        border-radius: 12px;
+        padding: 20px 24px;
+        margin-bottom: 40px;
+    }
+
+    .section-box p {
+        font-size: 18px;
+        opacity: 0.95;
+        line-height: 1.5;
+    }
+
+    /* Contributions cards */
+    .contributions {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 20px;
+    }
+
+    .contribution-item {
+        background-color: #141415;
+        border: 1px solid #232323;
+        border-radius: 12px;
+        padding: 18px 24px;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .contribution-item h3 {
+        margin: 0 0 8px 0;
+        color: #00adee;
+        font-size: 20px;
+    }
+
+    .contribution-item p {
+        margin: 0;
+        font-size: 17px;
+        line-height: 1.5;
+        color: #e0e0e0;
+    }
+
+    .contribution-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(0, 173, 238, 0.2);
+    }
+
+    @media (max-width: 900px) {
+        .media-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 500px) {
+        .media-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <a href="index.html">← Return Home</a>
+    <h1>Sam Hall</h1>
+</header>
+
+<div class="container">
+
+    <h1>Men in Black: Most Wanted</h1>
+
+    <div class="quick-info">
+        <p><strong>Game name:</strong> Men in Black: Most Wanted</p>
+        <p><strong>Platform:</strong> Meta Quest (VR)</p>
+        <p><strong>My Role:</strong> Level & Gameplay Designer</p>
+        <p><strong>Tools Used:</strong> Unity, Proprietary Mission Logic Tools, Confluence, Jira, Affinity Designer</p>
+    </div>
+
+    <!-- Media Grid -->
+    <div class="media-grid">
+        <img src="images/MIBMostWanted_KeyArt_16x9_4k.png" class="zoomable">
+        <iframe class="zoomable-video" src="https://www.youtube-nocookie.com/embed/C1Lv-jgS1ec" allowfullscreen></iframe>
+        <img src="images/MIBMostWanted_Screenshots_01.png" class="zoomable">
+        <img src="images/MIBMostWanted_Screenshots_02.png" class="zoomable">
+        <img src="images/MIBMostWanted_Screenshots_03.png" class="zoomable">
+        <img src="images/MIBMostWanted_Screenshots_04.png" class="zoomable">
+    </div>
+
+    <!-- Overview -->
+    <div class="section-box">
+        <h2>Overview</h2>
+        <p>
+            Men in Black: Most Wanted is an action-adventure VR title developed for Meta Quest,
+            placing players directly in the world of the Men in Black. The game combines fast-paced
+            shooting, gadget-based problem solving, environmental puzzles, stealth sequences,
+            and cinematic set pieces.
+            <br><br>
+            As part of the core design team, I helped define gameplay pacing, mission flow, combat encounters,
+            and environmental storytelling. Levels were crafted to feel intuitive in VR while delivering
+            exciting interactive moments that capture the tone and humor of the franchise.
+        </p>
+    </div>
+
+    <!-- Contributions -->
+    <h2>My Contributions</h2>
+    <div class="contributions">
+        <div class="contribution-item">
+            <h3>Level Design</h3>
+            <p>Built full VR levels from whitebox to completion, shaping combat encounters, exploration flow, and environmental storytelling.</p>
+        </div>
+        <div class="contribution-item">
+            <h3>Gameplay & Puzzle Design</h3>
+            <p>Designed interactive sequences and puzzle moments, ensuring they were readable, intuitive, and engaging in VR.</p>
+        </div>
+        <div class="contribution-item">
+            <h3>Mission Logic Implementation</h3>
+            <p>Scripted complex mission events, enemy behavior, triggers, and player interactions using proprietary tools.</p>
+        </div>
+        <div class="contribution-item">
+            <h3>Playtesting & Iteration</h3>
+            <p>Conducted and assessed VR playtests, providing actionable improvements for comfort, clarity, pacing, and engagement.</p>
+        </div>
+        <div class="contribution-item">
+            <h3>Cross-discipline Collaboration</h3>
+            <p>Worked closely with art, programming, animation, and narrative teams to ensure each level met franchise expectations and supported cinematic gameplay.</p>
+        </div>
+    </div>
+
+</div>
+
+<!-- Overlay -->
+<div id="overlay">
+    <span id="prev">&#10094;</span>
+    <span id="next">&#10095;</span>
+</div>
+
+<script>
+const overlay = document.getElementById('overlay');
+const mediaItems = [];
+let currentIndex = 0;
+
+// Gather all media items
+document.querySelectorAll('.media-grid img, .media-grid iframe').forEach((el, index)=>{
+    mediaItems.push(el);
+    el.dataset.index = index;
+    el.addEventListener('click', ()=> {
+        currentIndex = index;
+        showOverlay(currentIndex);
+    });
+});
+
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+
+function showOverlay(index){
+    const item = mediaItems[index];
+    overlay.innerHTML = '';
+    overlay.appendChild(prevBtn);
+    overlay.appendChild(nextBtn);
+    if(item.tagName === 'IMG'){
+        const img = document.createElement('img');
+        img.src = item.src;
+        overlay.appendChild(img);
+    } else if(item.tagName === 'IFRAME'){
+        const iframe = document.createElement('iframe');
+        iframe.src = item.src;
+        iframe.allowFullscreen = true;
+        overlay.appendChild(iframe);
+    }
+    overlay.style.display = 'flex';
+}
+
+function closeOverlay(){
+    overlay.style.display = 'none';
+    overlay.innerHTML = '';
+    overlay.appendChild(prevBtn);
+    overlay.appendChild(nextBtn);
+}
+
+overlay.addEventListener('click',(e)=>{
+    if(e.target === overlay) closeOverlay();
+});
+
+prevBtn.addEventListener('click',(e)=>{
+    e.stopPropagation();
+    currentIndex = (currentIndex - 1 + mediaItems.length)%mediaItems.length;
+    showOverlay(currentIndex);
+});
+
+nextBtn.addEventListener('click',(e)=>{
+    e.stopPropagation();
+    currentIndex = (currentIndex + 1)%mediaItems.length;
+    showOverlay(currentIndex);
+});
+
+// Keyboard
+document.addEventListener('keydown',(e)=>{
+    if(overlay.style.display === 'flex'){
+        if(e.key==='Escape') closeOverlay();
+        else if(e.key==='ArrowRight'){
+            currentIndex = (currentIndex + 1)%mediaItems.length;
+            showOverlay(currentIndex);
+        } else if(e.key==='ArrowLeft'){
+            currentIndex = (currentIndex - 1 + mediaItems.length)%mediaItems.length;
+            showOverlay(currentIndex);
+        }
+    }
+});
+</script>
+
+</body>
+</html>
