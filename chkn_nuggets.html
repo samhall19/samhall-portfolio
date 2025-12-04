@@ -1,54 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CHKN NUGGETS – Sam Hall</title>
-<style>
-/* Same template styles as above */
-body { margin:0; font-family:Arial,sans-serif; background:#0b0b0c; color:#fff; }
-header { position: sticky; top:0; z-index:1000; display:flex; justify-content:space-between; align-items:center; padding:20px 40px; background:#111; border-bottom:1px solid #333; }
-header a { text-decoration:none; color:#00adee; font-size:18px; }
-header h1 { margin:0; font-size:20px; color:#fff; opacity:0.8; }
-.container { max-width:1000px; margin:auto; padding:40px 20px 80px; line-height:1.6; }
-h1,h2 { margin-top:40px; font-size:28px; border-bottom:1px solid #333; padding-bottom:8px; color:#fff; }
-.quick-info { background:#141415; padding:20px; border-radius:12px; border:1px solid #232323; margin-bottom:40px; }
-.quick-info p { margin:6px 0; font-size:18px; }
-.media-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:40px; }
-.media-grid img, .media-grid iframe { width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:12px; border:1px solid #333; background:#222; cursor:pointer; }
-.section-text { font-size:18px; opacity:0.95; margin-top:16px; }
-ul.contributions { list-style:none; padding:0; margin-top:16px; }
-ul.contributions li { background:#141415; border:1px solid #00adee; border-radius:10px; padding:12px; margin-bottom:10px; }
-#overlay { position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.9); display:none; justify-content:center; align-items:center; z-index:2000; flex-direction:row; }
-#overlay img, #overlay iframe { max-width:90%; max-height:90%; border-radius:12px; }
-#prev,#next { position:absolute; top:50%; transform:translateY(-50%); font-size:50px; color:#00adee; cursor:pointer; user-select:none; padding:10px; }
-#prev { left:20px; } #next { right:20px; }
-#prev:hover,#next:hover { color:#fff; }
-@media(max-width:900px){ .media-grid{grid-template-columns:repeat(2,1fr);} }
-@media(max-width:500px){ .media-grid{grid-template-columns:1fr;} }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHKN NUGGETS – Sam Hall</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0b0b0c;
+            color: #fff;
+        }
+
+        /* Sticky header with your name always visible */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: #111;
+            border-bottom: 1px solid #333;
+        }
+
+        header a {
+            text-decoration: none;
+            color: #00adee;
+            font-size: 18px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 20px;
+            color: #fff;
+            opacity: 0.8;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px 20px 80px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            font-size: 36px;
+        }
+
+        h2 {
+            margin-top: 40px;
+            font-size: 28px;
+            color: #fff;
+            border-bottom: 1px solid #333;
+            padding-bottom: 8px;
+        }
+
+        .quick-info {
+            background: #141415;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #232323;
+            margin-bottom: 40px;
+        }
+
+        .quick-info p {
+            margin: 6px 0;
+            font-size: 18px;
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-top: 40px;
+        }
+
+        .media-grid img,
+        .media-grid iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 1px solid #333;
+            background: #222;
+            cursor: pointer;
+        }
+
+        .contributions {
+            list-style: none;
+            padding: 0;
+            margin-top: 16px;
+        }
+
+        .contributions li {
+            background: #141415;
+            border: 1px solid #00adee;
+            border-radius: 10px;
+            padding: 12px;
+            margin-bottom: 10px;
+        }
+
+        .section-text {
+            font-size: 18px;
+            opacity: 0.95;
+            margin-top: 16px;
+        }
+
+        #overlay {
+            position: fixed;
+            top:0;
+            left:0;
+            width: 100vw;
+            height:100vh;
+            background: rgba(0,0,0,0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        #overlay img,
+        #overlay iframe {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 12px;
+        }
+
+        #prev, #next {
+            position: absolute;
+            top:50%;
+            transform: translateY(-50%);
+            font-size: 50px;
+            color:#00adee;
+            cursor:pointer;
+            user-select: none;
+            padding: 10px;
+        }
+
+        #prev { left: 20px; }
+        #next { right: 20px; }
+        #prev:hover, #next:hover { color:#fff; }
+
+        @media (max-width: 900px) {
+            .media-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .media-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
+
 <header>
-<a href="index.html">← Return Home</a>
-<h1>Sam Hall</h1>
+    <a href="index.html">← Return Home</a>
+    <h1>Sam Hall</h1>
 </header>
 
 <div class="container">
-<h1>CHKN NUGGETS</h1>
 
-<div class="quick-info">
-<p><strong>Game name:</strong> CHKN NUGGETS (Unreleased)</p>
-<p><strong>Platform:</strong> PC / VR</p>
-<p><strong>My Role:</strong> Minigame Designer</p>
-<p><strong>Tools Used:</strong> Unity, Confluence, Jira</p>
+    <h1>CHKN NUGGETS</h1>
+
+    <div class="quick-info">
+        <p><strong>Game name:</strong> CHKN NUGGETS</p>
+        <p><strong>Platform:</strong> PC / VR</p>
+        <p><strong>My Role:</strong> Minigame Designer</p>
+        <p><strong>Tools Used:</strong> Unity, Confluence, Jira</p>
+    </div>
+
+    <div class="media-grid">
+        <img src="images/CHKNNUGGETS_KeyArt.png" class="zoomable">
+        <img src="images/CHKNNUGGETS_1.png" class="zoomable">
+        <img src="images/CHKNNUGGETS_2.png" class="zoomable">
+        <img src="images/CHKNNUGGETS_3.png" class="zoomable">
+        <img src="images/CHKNNUGGETS_4.png" class="zoomable">
+        <iframe class="zoomable-video" src="https://www.youtube-nocookie.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+    </div>
+
+    <h2>Overview</h2>
+    <p class="section-text">
+        CHKN NUGGETS is a fast-paced, competitive party game where players build wacky, animal-based characters and battle across a series of chaotic minigames. The game emphasizes humor, unpredictability, and fun, with each session offering fresh challenges and surprises.
+    </p>
+
+    <h2>My Contributions</h2>
+    <ul class="contributions">
+        <li><strong>Minigame Design:</strong> Concepted, prototyped, and iterated multiple minigames to ensure they were engaging and fun for all players.</li>
+        <li><strong>Gameplay Mechanics:</strong> Designed the character building system and ability interactions to create a chaotic but readable experience.</li>
+        <li><strong>Level & Scene Setup:</strong> Built modular minigame environments, balancing pacing and player engagement across sessions.</li>
+        <li><strong>Playtesting & Iteration:</strong> Conducted extensive playtests, gathered player feedback, and refined mechanics for fun and replayability.</li>
+        <li><strong>Collaboration:</strong> Worked with art, programming, and design teams to ensure a polished, cohesive experience.</li>
+    </ul>
+
 </div>
 
-<div class="media-grid">
-<img src="images/chkn_keyart.png" class="zoomable">
-<iframe class="zoomable-video" src="https://www.youtube-nocookie.com/embed/VIDEO_ID_HERE" allowfullscreen></iframe>
-<img src="images/chkn_1.png" class="zoomable">
-<img src="images/chkn_2.png" class="zoomable">
-<img src="images/chkn_3.png" class="zoomable">
-<img src="images/chkn_4.png" class="zoomable">
-</
+<div id="overlay">
+    <span id="prev">&#10094;</span>
+    <span id="next">&#10095;</span>
+</div>
+
+<script>
+    const overlay = document.getElementById('overlay');
+    const mediaItems = [];
+    let currentIndex = 0;
+
+    document.querySelectorAll('.media-grid img, .media-grid iframe').forEach((el, index) => {
+        mediaItems.push(el);
+        el.dataset.index = index;
+        el.addEventListener('click', () => {
+            currentIndex = index;
+            showOverlay(currentIndex);
+        });
+    });
+
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+
+    function showOverlay(index){
+        const item = mediaItems[index];
+        overlay.innerHTML = '';
+        overlay.appendChild(prevBtn);
+        overlay.appendChild(nextBtn);
+
+        if(item.tagName === 'IMG'){
+            const img = document.createElement('img');
+            img.src = item.src;
+            overlay.appendChild(img);
+        } else if(item.tagName === 'IFRAME'){
+            const iframe = document.createElement('iframe');
+            iframe.src = item.src;
+            iframe.allowFullscreen = true;
+            overlay.appendChild(iframe);
+        }
+        overlay.style.display = 'flex';
+    }
+
+    function closeOverlay(){
+        overlay.style.display = 'none';
+        overlay.innerHTML = '';
+        overlay.appendChild(prevBtn);
+        overlay.appendChild(nextBtn);
+    }
+
+    overlay.addEventListener('click', (e) => {
+        if(e.target === overlay) closeOverlay();
+    });
+
+    prevBtn.addEventListener('click', (e)=>{
+        e.stopPropagation();
+        currentIndex = (currentIndex - 1 + mediaItems.length) % mediaItems.length;
+        showOverlay(currentIndex);
+    });
+
+    nextBtn.addEventListener('click', (e)=>{
+        e.stopPropagation();
+        currentIndex = (currentIndex + 1) % mediaItems.length;
+        showOverlay(currentIndex);
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if(overlay.style.display === 'flex'){
+            if(e.key === 'Escape') closeOverlay();
+            else if(e.key === 'ArrowRight'){
+                currentIndex = (currentIndex + 1) % mediaItems.length;
+                showOverlay(currentIndex);
+            } else if(e.key === 'ArrowLeft'){
+                currentIndex = (currentIndex - 1 + mediaItems.length) % mediaItems.length;
+                showOverlay(currentIndex);
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
