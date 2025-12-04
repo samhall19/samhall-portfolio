@@ -17,37 +17,39 @@
     display: block;
 }
 
-.contributions {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-top: 20px;
-}
+ /* Contributions cards */
+    .contributions {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 20px;
+    }
 
-.contribution-item {
-    background-color: #141415;
-    border: 1px solid #232323;
-    border-radius: 12px;
-    padding: 18px 24px;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
+    .contribution-item {
+        background-color: #141415;
+        border: 1px solid #232323;
+        border-radius: 12px;
+        padding: 18px 24px;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
 
-.contribution-item h3 {
-    margin: 0 0 8px 0;
-    color: #00adee;
-    font-size: 20px;
-}
+    .contribution-item h3 {
+        margin: 0 0 8px 0;
+        color: #00adee;
+        font-size: 20px;
+    }
 
-.contribution-item p {
-    margin: 0;
-    font-size: 17px;
-    line-height: 1.5;
-    color: #e0e0e0;
-}
+    .contribution-item p {
+        margin: 0;
+        font-size: 17px;
+        line-height: 1.5;
+        color: #e0e0e0;
+    }
 
-.contribution-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(0, 173, 238, 0.2);
+    .contribution-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(0, 173, 238, 0.2);
+    }
 }
 
 

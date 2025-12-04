@@ -90,19 +90,39 @@
             cursor: pointer;
         }
 
-        .contributions {
-            list-style: none;
-            padding: 0;
-            margin-top: 16px;
-        }
+         /* Contributions cards */
+    .contributions {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 20px;
+    }
 
-        .contributions li {
-            background: #141415;
-            border: 1px solid #00adee;
-            border-radius: 10px;
-            padding: 12px;
-            margin-bottom: 10px;
-        }
+    .contribution-item {
+        background-color: #141415;
+        border: 1px solid #232323;
+        border-radius: 12px;
+        padding: 18px 24px;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .contribution-item h3 {
+        margin: 0 0 8px 0;
+        color: #00adee;
+        font-size: 20px;
+    }
+
+    .contribution-item p {
+        margin: 0;
+        font-size: 17px;
+        line-height: 1.5;
+        color: #e0e0e0;
+    }
+
+    .contribution-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(0, 173, 238, 0.2);
+    }
 
         .section-text {
             font-size: 18px;
@@ -190,14 +210,30 @@
         CHKN NUGGETS is a fast-paced, competitive party game where players build wacky, animal-based characters and battle across a series of chaotic minigames. The game emphasizes humor, unpredictability, and fun, with each session offering fresh challenges and surprises.
     </p>
 
+	    <!-- Contributions -->
     <h2>My Contributions</h2>
-    <ul class="contributions">
-        <li><strong>Minigame Design:</strong> Concepted, prototyped, and iterated multiple minigames to ensure they were engaging and fun for all players.</li>
-        <li><strong>Gameplay Mechanics:</strong> Designed the character building system and ability interactions to create a chaotic but readable experience.</li>
-        <li><strong>Level & Scene Setup:</strong> Built modular minigame environments, balancing pacing and player engagement across sessions.</li>
-        <li><strong>Playtesting & Iteration:</strong> Conducted extensive playtests, gathered player feedback, and refined mechanics for fun and replayability.</li>
-        <li><strong>Collaboration:</strong> Worked with art, programming, and design teams to ensure a polished, cohesive experience.</li>
-    </ul>
+    <div class="contributions">
+        <div class="contribution-item">
+            <h3>Minigame Design</h3>
+            <p>Concepted, prototyped, and iterated multiple minigames to ensure they were engaging and fun for all players.</p>
+        </div>
+        <div class="contribution-item">
+            <h3>Gameplay Mechanics</h3>
+            <p>Designed the character building system and ability interactions to create a chaotic but readable experience.</p>
+        </div>
+        <div class="contribution-item">
+            <h3>Level & Scene Setup</h3>
+            <p>Built modular minigame environments, balancing pacing and player engagement across sessions.</p>
+        </div>
+        <div class="contribution-item">
+            <h3>Playtesting & Iteration</h3>
+            <p>Conducted extensive playtests, gathered player feedback, and refined mechanics for fun and replayability.</p>
+        </div>
+        <div class="contribution-item">
+            <h3>Collaboration</h3>
+            <p>Worked with art, programming, and design teams to ensure a polished, cohesive experience.</p>
+        </div>
+    </div>
 
 </div>
 

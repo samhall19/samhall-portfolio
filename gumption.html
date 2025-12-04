@@ -16,8 +16,39 @@
         .media-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:40px; }
         .media-grid img, .media-grid iframe { width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:12px; border:1px solid #333; background:#222; cursor:pointer; }
         .section-text { font-size:18px; opacity:0.95; margin-top:16px; }
-        ul.contributions { list-style:none; padding:0; margin-top:16px; }
-        ul.contributions li { background:#141415; border:1px solid #00adee; border-radius:10px; padding:12px; margin-bottom:10px; }
+         /* Contributions cards */
+    .contributions {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 20px;
+    }
+
+    .contribution-item {
+        background-color: #141415;
+        border: 1px solid #232323;
+        border-radius: 12px;
+        padding: 18px 24px;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .contribution-item h3 {
+        margin: 0 0 8px 0;
+        color: #00adee;
+        font-size: 20px;
+    }
+
+    .contribution-item p {
+        margin: 0;
+        font-size: 17px;
+        line-height: 1.5;
+        color: #e0e0e0;
+    }
+
+    .contribution-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(0, 173, 238, 0.2);
+    }
         #overlay { position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.9); display:none; justify-content:center; align-items:center; z-index:2000; flex-direction:row; }
         #overlay img, #overlay iframe { max-width:90%; max-height:90%; border-radius:12px; }
         #prev,#next { position:absolute; top:50%; transform:translateY(-50%); font-size:50px; color:#00adee; cursor:pointer; user-select:none; padding:10px; }
@@ -57,14 +88,26 @@
 Gumption is a rhythmic VR experience centered around telekinesis. Players interact with a living fantasy world, controlling both combat and a giant flying companion, creating immersive, visceral moments. The game combines precision-based mechanics with creative world-building to deliver an engaging VR experience.
 </p>
 
-<h2>My Contributions</h2>
-<ul class="contributions">
-<li><strong>Game Concept & Prototyping:</strong> Developed core mechanics and proof-of-concept prototypes.</li>
-<li><strong>Mission Design:</strong> Created levels and challenges to fit rhythm-based gameplay and telekinesis interactions.</li>
-<li><strong>Level Iteration:</strong> Tested and refined environments for pacing, flow, and player engagement.</li>
-<li><strong>Playtesting & Feedback:</strong> Evaluated player behavior and iterated on combat responsiveness and comfort.</li>
-</ul>
-</div>
+<!-- Contributions -->
+    <h2>My Contributions</h2>
+    <div class="contributions">
+        <div class="contribution-item">
+            <h3>Game Concept & Prototyping</h3>
+            <p>Developed core mechanics and proof-of-concept prototypes.</p>
+        </div>
+        <div class="contribution-item">
+            <h3>Mission Design</h3>
+            <p>Created levels and challenges to fit rhythm-based gameplay and telekinesis interactions.</p>
+        </div>
+        <div class="contribution-item">
+            <h3>Level Iteration</h3>
+            <p>Tested and refined environments for pacing, flow, and player engagement.</p>
+        </div>
+        <div class="contribution-item">
+            <h3>Playtesting & Feedback</h3>
+            <p>Evaluated player behavior and iterated on combat responsiveness and comfort.</p>
+        </div>
+    </div>
 
 <div id="overlay"><span id="prev">&#10094;</span><span id="next">&#10095;</span></div>
 

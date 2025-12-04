@@ -16,8 +16,39 @@ h1,h2 { margin-top:40px; font-size:28px; border-bottom:1px solid #333; padding-b
 .media-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:40px; }
 .media-grid img, .media-grid iframe { width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:12px; border:1px solid #333; background:#222; cursor:pointer; }
 .section-text { font-size:18px; opacity:0.95; margin-top:16px; }
-ul.contributions { list-style:none; padding:0; margin-top:16px; }
-ul.contributions li { background:#141415; border:1px solid #00adee; border-radius:10px; padding:12px; margin-bottom:10px; }
+ /* Contributions cards */
+    .contributions {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 20px;
+    }
+
+    .contribution-item {
+        background-color: #141415;
+        border: 1px solid #232323;
+        border-radius: 12px;
+        padding: 18px 24px;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .contribution-item h3 {
+        margin: 0 0 8px 0;
+        color: #00adee;
+        font-size: 20px;
+    }
+
+    .contribution-item p {
+        margin: 0;
+        font-size: 17px;
+        line-height: 1.5;
+        color: #e0e0e0;
+    }
+
+    .contribution-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(0, 173, 238, 0.2);
+    }
 #overlay { position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.9); display:none; justify-content:center; align-items:center; z-index:2000; flex-direction:row; }
 #overlay img, #overlay iframe { max-width:90%; max-height:90%; border-radius:12px; }
 #prev,#next { position:absolute; top:50%; transform:translateY(-50%); font-size:50px; color:#00adee; cursor:pointer; user-select:none; padding:10px; }
@@ -57,15 +88,30 @@ ul.contributions li { background:#141415; border:1px solid #00adee; border-radiu
 Originally developed as a standalone competitive multiplayer VR game, Shootball allows players to use a variety of fun, whacky weapons to shoot a ball into the opponent’s goal. The game was later rebuilt inside Meta Horizon Worlds, adapting the mechanics for VR headset editing and multiplayer interaction. Playtesting and competitive balance were central to the design process.
 </p>
 
-<h2>My Contributions</h2>
-<ul class="contributions">
-<li><strong>Lead Game Designer:</strong> Directed the game vision and core mechanics across both platforms.</li>
-<li><strong>Combat & Weapon Design:</strong> Developed balanced weapons and competitive mechanics.</li>
-<li><strong>Playtesting & Feedback:</strong> Ran extensive VR tests, iterating for fairness and fun.</li>
-<li><strong>Cross-team Collaboration:</strong> Coordinated with art, programming, and narrative teams to deliver polished multiplayer experiences.</li>
-<li><strong>Research:</strong> Conducted market research into VR competitive games to inform design decisions.</li>
-</ul>
-</div>
+<!-- Contributions -->
+    <h2>My Contributions</h2>
+    <div class="contributions">
+        <div class="contribution-item">
+            <h3>Lead Game Designer</h3>
+            <p>Directed the game vision and core mechanics across both platforms.</p>
+        </div>
+        <div class="contribution-item">
+            <h3>Combat & Weapon Design</h3>
+            <p>Developed balanced weapons and competitive mechanics.</p>
+        </div>
+        <div class="contribution-item">
+            <h3>Playtesting & Feedback</h3>
+            <p>Ran extensive VR tests, iterating for fairness and fun.</p>
+        </div>
+        <div class="contribution-item">
+            <h3>Cross-team Collaboration</h3>
+            <p>Coordinated with art, programming, and narrative teams to deliver polished multiplayer experiences.</p>
+        </div>
+        <div class="contribution-item">
+            <h3>Research</h3>
+            <p>Conducted market research into VR competitive games to inform design decisions.</p>
+        </div>
+    </div>
 
 <div id="overlay"><span id="prev">&#10094;</span><span id="next">&#10095;</span></div>
 <script>

@@ -17,8 +17,39 @@ h1,h2 { margin-top:40px; font-size:28px; border-bottom:1px solid #333; padding-b
 .media-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:40px; }
 .media-grid img, .media-grid iframe { width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:12px; border:1px solid #333; background:#222; cursor:pointer; }
 .section-text { font-size:18px; opacity:0.95; margin-top:16px; }
-ul.contributions { list-style:none; padding:0; margin-top:16px; }
-ul.contributions li { background:#141415; border:1px solid #00adee; border-radius:10px; padding:12px; margin-bottom:10px; }
+   /* Contributions cards */
+    .contributions {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 20px;
+    }
+
+    .contribution-item {
+        background-color: #141415;
+        border: 1px solid #232323;
+        border-radius: 12px;
+        padding: 18px 24px;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .contribution-item h3 {
+        margin: 0 0 8px 0;
+        color: #00adee;
+        font-size: 20px;
+    }
+
+    .contribution-item p {
+        margin: 0;
+        font-size: 17px;
+        line-height: 1.5;
+        color: #e0e0e0;
+    }
+
+    .contribution-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(0, 173, 238, 0.2);
+    }
 #overlay { position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.9); display:none; justify-content:center; align-items:center; z-index:2000; flex-direction:row; }
 #overlay img, #overlay iframe { max-width:90%; max-height:90%; border-radius:12px; }
 #prev,#next { position:absolute; top:50%; transform:translateY(-50%); font-size:50px; color:#00adee; cursor:pointer; user-select:none; padding:10px; }
@@ -58,14 +89,26 @@ ul.contributions li { background:#141415; border:1px solid #00adee; border-radiu
 International Space Banana is my first commercially released game, a two-person startup project. Players control a banana floating in low gravity with intentionally difficult-to-control mechanics. The game combines humor, philosophy, and puzzle-solving, progressively increasing complexity as players navigate its comical, low-gravity world.
 </p>
 
-<h2>My Contributions</h2>
-<ul class="contributions">
-<li><strong>C# Programming:</strong> Implemented core gameplay mechanics and physics for unique low-gravity controls.</li>
-<li><strong>Gameplay & Puzzle Design:</strong> Designed puzzles that evolve upon the core mechanics and challenge the player in creative ways.</li>
-<li><strong>Level Design:</strong> Crafted environments and whitebox-to-finished stages to maximize engagement.</li>
-<li><strong>Voice & Narrative Integration:</strong> Integrated story, voiceover, and humor into gameplay mechanics.</li>
-</ul>
-</div>
+<!-- Contributions -->
+    <h2>My Contributions</h2>
+    <div class="contributions">
+        <div class="contribution-item">
+            <h3>C# Programming</h3>
+            <p>Implemented core gameplay mechanics and physics for unique low-gravity controls.</p>
+        </div>
+        <div class="contribution-item">
+            <h3>Gameplay & Puzzle Design</h3>
+            <p>Designed puzzles that evolve upon the core mechanics and challenge the player in creative ways.</p>
+        </div>
+        <div class="contribution-item">
+            <h3>Level Design</h3>
+            <p>Crafted environments and whitebox-to-finished stages to maximize engagement.</p>
+        </div>
+        <div class="contribution-item">
+            <h3>Voice & Narrative Integration</h3>
+            <p>Integrated story, voiceover, and humor into gameplay mechanics.</p>
+        </div>
+    </div>
 
 <div id="overlay"><span id="prev">&#10094;</span><span id="next">&#10095;</span></div>
 <script>
